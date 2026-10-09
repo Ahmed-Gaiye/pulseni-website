@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tell us your idea | Pulseni</title>
+<meta name="description" content="Tell Pulseni about a painful problem in your work. A few short questions, then we read it properly and reply by email.">
+<link rel="canonical" href="https://pulseni.com/start/">
+<meta name="theme-color" content="#0E2B20">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon-180.png">
+<link rel="preload" href="../fonts/goudy-bookletter-1911.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="start-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="band">
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Pulseni home"><img src="../assets/pulseni-logo-white.svg" alt="Pulseni" width="84" height="34"></a>
+    <nav class="site" aria-label="Main">
+      <a href="../index.html">Back to home</a>
+    </nav>
+  </div>
+</header>
+</div>
+
+<main id="main" class="enquiry wrap">
+  <div class="enquiry-intro">
+    <p class="label">Tell us your idea</p>
+    <h1>Start a conversation.</h1>
+    <p class="enquiry-lead">You know your industry. Tell us the problem you want to solve and who has it. We'll read it properly and reply by email.</p>
+    <h2>What happens next</h2>
+    <ol class="next-steps">
+      <li>We read your enquiry and reply by email.</li>
+      <li>We have a free 30-minute call to understand the problem and the people who have it.</li>
+      <li>We suggest the route that fits: paid development or, where it suits, an equity partnership.</li>
+    </ol>
+    <p class="enquiry-alt">Rather talk? <a href="https://cal.com/pulseni/call">Book a free 30-minute call</a>. Prefer email? <a href="mailto:hello@pulseni.com">hello@pulseni.com</a></p>
+  </div>
+
+  <div class="enquiry-panel">
+    <!-- Answers are sent to Formspree, which emails them to hello@pulseni.com.
+         Set action to the form's Formspree address (https://formspree.io/f/xxxxxxx) once the account exists.
+         While it is empty the form runs in test mode and sends nothing. -->
+    <form class="enquiry-form" id="enquiry" method="POST" action="https://formspree.io/f/myekejoa" novalidate>
+      <input type="hidden" name="_subject" value="New enquiry from pulseni.com">
+      <div class="enquiry-trap" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="f">
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="name" autocomplete="name" required aria-describedby="e-name">
+          <p class="f-error" id="e-name"></p>
+        </div>
+        <div class="f">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required aria-describedby="e-email">
+          <p class="f-error" id="e-email"></p>
+        </div>
+        <div class="f">
+          <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+          <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your idea</legend>
+        <div class="f">
+          <label for="f-role">Your industry or role</label>
+          <input type="text" id="f-role" name="role" placeholder="e.g. Chartered surveyor, 15 years" required aria-describedby="e-role">
+          <p class="f-error" id="e-role"></p>
+        </div>
+        <div class="f">
+          <label for="f-idea">What would you like to build?</label>
+          <p class="f-hint" id="h-idea">Describe the problem, who has it, and what a better solution would do.</p>
+          <textarea id="f-idea" name="idea" rows="6" required aria-describedby="h-idea e-idea"></textarea>
+          <p class="f-error" id="e-idea"></p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Working together</legend>
+        <div class="f" role="radiogroup" aria-labelledby="l-route" aria-describedby="e-route">
+          <p class="f-label" id="l-route">How would you like to work with us?</p>
+          <div class="choices">
+            <label><input type="radio" name="route" value="Start with a 2-week prototype" required><span><b>Start with a 2-week prototype</b><small>A clickable prototype, a plan and a fixed quote for the full build.</small></span></label>
+            <label><input type="radio" name="route" value="Paid development"><span><b>Paid development</b><small>We agree a fixed price and what you get before we start.</small></span></label>
+            <label><input type="radio" name="route" value="Explore an equity partnership"><span><b>Explore an equity partnership</b><small>For a strong idea, a share of the business instead of a fee. Subject to fit and agreed terms.</small></span></label>
+            <label><input type="radio" name="route" value="I'm not sure yet"><span><b>I&rsquo;m not sure yet</b><small>We&rsquo;ll suggest the route that fits.</small></span></label>
+          </div>
+          <p class="f-error" id="e-route"></p>
+        </div>
+        <div class="f">
+          <label for="f-when">When would you like to start? <span class="opt">(optional)</span></label>
+          <select id="f-when" name="when">
+            <option value="">Choose one</option>
+            <option>As soon as possible</option>
+            <option>In the next few months</option>
+            <option>Just exploring</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <p class="test-mode" hidden>Test mode: this form isn't connected yet, so pressing Send won't send anything.</p>
+      <p class="send-error" id="send-error" role="alert"></p>
+      <button class="button enquiry-send" type="submit">Send enquiry</button>
+    </form>
+
+    <div class="enquiry-done" id="enquiry-done" hidden tabindex="-1">
+      <h2>Thank you<span class="done-name"></span>.</h2>
+      <p>We've received your enquiry and will reply by email.</p>
+      <a class="button ghost-dark" href="../index.html">Back to the home page</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Pulseni · Software development studio, United Kingdom</span>
+    <span class="foot-links"><a href="../about/">About</a><a href="../blog/">Blog</a><a href="../privacy/index.html">Privacy Policy</a><a href="https://www.linkedin.com/company/pulseni/" rel="me">LinkedIn</a></span>
+  </div>
+</footer>
+<script src="start.js" defer></script>
+</body>
+</html>
